@@ -41,12 +41,6 @@ app.use(function (req, res, next) {
   next(err);
 });
 
-app.use(function (err, req, res, next) {
-  console.log(err)
-  res.status(err.status || 500);
-  res.send(err.message);
-});
-
 app.listen(port, () => console.log(`LISTENING ON PORT ${port}`));
 
 module.exports = app;
